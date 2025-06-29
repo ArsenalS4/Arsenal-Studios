@@ -1,0 +1,82 @@
+/* Button Styles */
+.cta-button {
+    position: relative;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    left: 0;
+}
+
+.button-glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    opacity: 0;
+    animation: buttonGlitch 3s infinite;
+}
+
+@keyframes buttonGlitch {
+    0%, 90%, 100% { opacity: 0; transform: translate(0); }
+    91%, 94% { opacity: 0.3; transform: translate(2px, -2px); }
+}
+
+.game-button {
+    position: relative;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.game-button.primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.game-button.secondary {
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+.game-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+

@@ -1,0 +1,299 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal Studios LLC - Cyberpunk Game Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glitch-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text glitch" data-text="ARSENAL">ARSENAL</span>
+                <span class="logo-subtext">STUDIOS LLC</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#game" class="nav-link">THE EXPERIMENT</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line glitch" data-text="ARSENAL STUDIOS">ARSENAL STUDIOS</span>
+                <span class="line">CRAFTING THE FUTURE</span>
+                <span class="line">OF GAMING</span>
+            </h1>
+            <p class="hero-subtitle">Pushing the boundaries of interactive entertainment in the digital realm</p>
+            <button class="cta-button" onclick="document.getElementById('game').scrollIntoView({behavior: 'smooth'})">
+                <span>ENTER THE ARSENAL</span>
+                <div class="button-glitch"></div>
+            </button>
+        </div>
+        
+        <!-- Matrix Widget in Hero -->
+        <div class="widget-container hero-widget">
+            <div class="widget-header">
+                <span>MATRIX_STREAM</span>
+                <button class="widget-close" data-widget="matrix">&times;</button>
+            </div>
+            <div class="matrix-widget" id="matrix-widget">
+                <div class="matrix-stream" id="matrix-content"></div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL TO EXPLORE</span>
+        </div>
+    </section>
+
+    <!-- Game Showcase -->
+    <section id="game" class="game-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glitch" data-text="THE ARSENAL EXPERIMENT">THE ARSENAL EXPERIMENT</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="game-showcase">
+                <div class="game-visual">
+                    <div class="game-image-container">
+                        <div class="game-image"></div>
+                        <div class="image-overlay"></div>
+                        <div class="scan-lines"></div>
+                    </div>
+                </div>
+                
+                <div class="game-info">
+                    <h3 class="game-tagline">THE FUTURE IS NOT WHAT IT SEEMS</h3>
+                    <p class="game-description">
+                        Immerse yourself in a single-player narrative-driven fast-paced FPS experience like no other. The Arsenal Experiment combines cutting-edge gameplay mechanics with adrenaline-pumping combat, creating a cinematic journey that adapts to your playstyle. Question reality. Trust no one. Survive the experiment.
+                    </p>
+                    
+                    <div class="game-features">
+                        <div class="feature">
+                            <span class="feature-icon">◆</span>
+                            <span>Single-player narrative campaign</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">◆</span>
+                            <span>Fast-paced tactical combat</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">◆</span>
+                            <span>AI-driven story adaptation</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">◆</span>
+                            <span>Immersive weapon systems</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-actions">
+                        <button class="game-button primary">
+                            <span>WISHLIST NOW</span>
+                            <div class="button-bg"></div>
+                        </button>
+                        <button class="game-button secondary">
+                            <span>WATCH TRAILER</span>
+                        </button>
+                    </div>
+                    
+                    <div class="release-info">
+                        <span class="release-date">COMING SOON 2028</span>
+                        <div class="platforms">
+                            <span class="platform">PC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- System Monitor Widget in Game Section -->
+        <div class="widget-container game-widget">
+            <div class="widget-header">
+                <span>SYS_MONITOR</span>
+                <button class="widget-close" data-widget="monitor">&times;</button>
+            </div>
+            <div class="system-monitor" id="system-monitor">
+                <div class="monitor-line">
+                    <span>CPU:</span>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <div class="monitor-line">
+                    <span>GPU:</span>
+                    <div class="progress-bar"><div class="progress-fill" style="animation-delay: 0.5s;"></div></div>
+                </div>
+                <div class="monitor-line">
+                    <span>MEM:</span>
+                    <div class="progress-bar"><div class="progress-fill" style="animation-delay: 1s;"></div></div>
+                </div>
+                <div class="monitor-line">
+                    <span>NET:</span>
+                    <div class="progress-bar"><div class="progress-fill" style="animation-delay: 1.5s;"></div></div>
+                </div>
+                <div style="margin-top: 10px; font-size: 10px; color: var(--accent-color);">
+                    UPTIME: <span id="uptime">00:00:00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Widgets Section -->
+    <section class="widgets-section">
+        <div class="container">
+            <h2 class="section-title glitch" data-text="SYSTEM INTERFACE">SYSTEM INTERFACE</h2>
+            <div class="widgets-grid">
+                <div class="widget-container">
+                    <div class="widget-header">
+                        <span>CONNECT 5</span>
+                        <button class="widget-close" data-widget="connect5">&times;</button>
+                    </div>
+                    <div class="connect5-widget" id="connect5-widget">
+                        <div class="game-status" id="game-status">Your turn</div>
+                        <div class="connect5-grid" id="connect5-grid"></div>
+                        <button class="reset-game" id="reset-game">New Game</button>
+                    </div>
+                </div>
+                
+                <div class="widget-container">
+                    <div class="widget-header">
+                        <span>REAL-TIME METRICS</span>
+                        <button class="widget-close" data-widget="analytics">&times;</button>
+                    </div>
+                    <div class="analytics-widget" id="analytics-widget">
+                        <div id="analytics-content">
+                            <div class="metric-line">
+                                <span>VISITORS:</span>
+                                <span class="metric-value" id="visitors">0</span>
+                            </div>
+                            <div class="metric-line">
+                                <span>ENGAGEMENT:</span>
+                                <span class="metric-value" id="engagement">0%</span>
+                            </div>
+                            <div class="metric-line">
+                                <span>NEURAL_SYNC:</span>
+                                <span class="metric-value" id="neural">0.0%</span>
+                            </div>
+                            <div class="metric-line">
+                                <span>BANDWIDTH:</span>
+                                <span class="metric-value" id="bandwidth">0 MB/s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">WHO WE ARE</h2>
+                    <p class="about-description">
+                        Arsenal Studios LLC is a cutting-edge game development studio founded on the principle that gaming is the ultimate form of digital art. We specialize in creating immersive experiences that challenge conventional boundaries.
+                    </p>
+                    <p class="about-description">
+                        Our team of visionaries, programmers, and digital artists work at the intersection of technology and creativity, crafting worlds that blur the line between reality and simulation.
+                    </p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2025">0</span>
+                        <span class="stat-label">FOUNDED</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">TEAM MEMBERS</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1">0</span>
+                        <span class="stat-label">GAME IN DEVELOPMENT</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">% PASSION</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analytics Widget in About Section -->
+            <div class="widget-container about-widget">
+                <div class="widget-header">
+                    <span>NEURAL_ANALYTICS</span>
+                    <button class="widget-close" data-widget="analytics2">&times;</button>
+                </div>
+                <div class="analytics-widget" id="analytics-widget-2">
+                    <div id="analytics-content-2">
+                        <div class="metric-line">
+                            <span>CORE_TEMP:</span>
+                            <span class="metric-value" id="core-temp">0°C</span>
+                        </div>
+                        <div class="metric-line">
+                            <span>POWER_DRAW:</span>
+                            <span class="metric-value" id="power-draw">0W</span>
+                        </div>
+                        <div class="metric-line">
+                            <span>SYNC_RATE:</span>
+                            <span class="metric-value" id="sync-rate">0%</span>
+                        </div>
+                        <div class="metric-line">
+                            <span>STABILITY:</span>
+                            <span class="metric-value" id="stability">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">WELCOME TO THE EXPERIMENT</h2>
+            <p class="contact-subtitle">Ready to be part of the future? Get in touch.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">EMAIL</span>
+                        <span class="contact-value">contact@arsenalstudios.dev</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://discord.gg/fKdgtagbgE" class="social-link" target="_blank">DISCORD</a>
+                    <a href="https://www.youtube.com/@TheArsenalExperiment" class="social-link" target="_blank">YOUTUBE</a>
+                    <a href="#" class="social-link">STEAM</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Arsenal Studios LLC. All rights reserved. The future is now.</p>
+        </div>
+    </footer>
+
+    <div id="spaceships-container"></div>
+
+    <script src="js/core.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/widgets.js"></script>
+    <script src="js/spaceships.js"></script>
+</body>
+</html>

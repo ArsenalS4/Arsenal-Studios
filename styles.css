@@ -1,0 +1,21 @@
+/* Import all style modules */
+@import url('styles/base.css');
+@import url('styles/effects.css');
+@import url('styles/layout.css');
+@import url('styles/sections.css');
+@import url('styles/widgets.css');
+@import url('styles/buttons.css');
+@import url('styles/spaceships.css');
+
+/* Remove epileptic flash effects */
+.glitch-overlay {
+    display: none;
+}
+
+/* Remove fixed positioning for old widgets */
+.matrix-widget:not(.widgets-section .matrix-widget),
+.analytics-widget:not(.widgets-section .analytics-widget),
+.neural-widget,
+.system-monitor:not(.widgets-section .system-monitor) {
+    display: none;
+}
