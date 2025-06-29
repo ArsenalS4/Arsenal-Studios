@@ -2,19 +2,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsenal Studios LLC - Cyberpunk Game Studio</title>
+    <title>Arsenal Studios LLC - Cyberpunk Game Development Studio | The Arsenal Experiment</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Arsenal Studios LLC - Leading cyberpunk game development studio creating The Arsenal Experiment. Cutting-edge AI-driven gaming experiences with immersive cyberpunk aesthetics.">
+    <meta name="keywords" content="game development, cyberpunk games, AI gaming, Arsenal Studios, The Arsenal Experiment, indie game studio, futuristic games, VR games, PC gaming, console gaming">
+    <meta name="author" content="Arsenal Studios LLC">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Arsenal Studios LLC - Cyberpunk Game Studio">
+    <meta property="og:description" content="Creating the future of gaming with The Arsenal Experiment - an AI-driven cyberpunk experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arsenalstudios.dev">
+    <meta property="og:image" content="/LogoGT.png">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arsenal Studios LLC - Cyberpunk Game Studio">
+    <meta name="twitter:description" content="Creating the future of gaming with The Arsenal Experiment - an AI-driven cyberpunk experience.">
+    <meta name="twitter:image" content="/LogoGT.png">
+    
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/LogoGT.png">
 </head>
 <body>
     <div class="glitch-overlay"></div>
+    <div class="matrix-rain"></div>
     
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-text glitch" data-text="ARSENAL">ARSENAL</span>
-                <span class="logo-subtext">STUDIOS LLC</span>
+                <img src="/LogoGT.png" alt="Arsenal Studios Logo" class="logo-image">
+                <div class="logo-text-container">
+                    <span class="logo-text glitch" data-text="ARSENAL">ARSENAL</span>
+                    <span class="logo-subtext">STUDIOS LLC</span>
+                </div>
             </div>
             <div class="nav-links">
                 <a href="#home" class="nav-link">HOME</a>
@@ -29,6 +54,9 @@
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
+            <div class="hero-logo">
+                <img src="/LogoGT.png" alt="Arsenal Studios Glitch Logo" class="hero-logo-image">
+            </div>
             <h1 class="hero-title">
                 <span class="line glitch" data-text="ARSENAL STUDIOS">ARSENAL STUDIOS</span>
                 <span class="line">CRAFTING THE FUTURE</span>
@@ -40,18 +68,6 @@
                 <div class="button-glitch"></div>
             </button>
         </div>
-        
-        <!-- Matrix Widget in Hero -->
-        <div class="widget-container hero-widget">
-            <div class="widget-header">
-                <span>MATRIX_STREAM</span>
-                <button class="widget-close" data-widget="matrix">&times;</button>
-            </div>
-            <div class="matrix-widget" id="matrix-widget">
-                <div class="matrix-stream" id="matrix-content"></div>
-            </div>
-        </div>
-        
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
             <span>SCROLL TO EXPLORE</span>
@@ -62,14 +78,16 @@
     <section id="game" class="game-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title glitch" data-text="THE ARSENAL EXPERIMENT">THE ARSENAL EXPERIMENT</h2>
+                <img src="/Logoupscaled.png" alt="The Arsenal Experiment Logo" class="section-logo">
                 <div class="title-underline"></div>
             </div>
             
             <div class="game-showcase">
                 <div class="game-visual">
                     <div class="game-image-container">
-                        <div class="game-image"></div>
+                        <div class="game-image">
+                            <img src="/Screenshot 2025-06-27 160733.png" alt="The Arsenal Experiment Gameplay" class="gameplay-screenshot">
+                        </div>
                         <div class="image-overlay"></div>
                         <div class="scan-lines"></div>
                     </div>
@@ -78,25 +96,25 @@
                 <div class="game-info">
                     <h3 class="game-tagline">THE FUTURE IS NOT WHAT IT SEEMS</h3>
                     <p class="game-description">
-                        Immerse yourself in a single-player narrative-driven fast-paced FPS experience like no other. The Arsenal Experiment combines cutting-edge gameplay mechanics with adrenaline-pumping combat, creating a cinematic journey that adapts to your playstyle. Question reality. Trust no one. Survive the experiment.
+                        Enter a world where reality bends to your will. The Arsenal Experiment combines cutting-edge AI with immersive gameplay, creating an experience that adapts to your every move. Question everything. Trust no one. Survive the experiment.
                     </p>
                     
                     <div class="game-features">
                         <div class="feature">
                             <span class="feature-icon">◆</span>
-                            <span>Single-player narrative campaign</span>
+                            <span>Fast-paced action combat</span>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">◆</span>
-                            <span>Fast-paced tactical combat</span>
+                            <span>Next-gen destruction physics</span>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">◆</span>
-                            <span>AI-driven story adaptation</span>
+                            <span>Ultra violence gameplay</span>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">◆</span>
-                            <span>Immersive weapon systems</span>
+                            <span>First-person shooter experience</span>
                         </div>
                     </div>
                     
@@ -114,82 +132,6 @@
                         <span class="release-date">COMING SOON 2028</span>
                         <div class="platforms">
                             <span class="platform">PC</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- System Monitor Widget in Game Section -->
-        <div class="widget-container game-widget">
-            <div class="widget-header">
-                <span>SYS_MONITOR</span>
-                <button class="widget-close" data-widget="monitor">&times;</button>
-            </div>
-            <div class="system-monitor" id="system-monitor">
-                <div class="monitor-line">
-                    <span>CPU:</span>
-                    <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
-                <div class="monitor-line">
-                    <span>GPU:</span>
-                    <div class="progress-bar"><div class="progress-fill" style="animation-delay: 0.5s;"></div></div>
-                </div>
-                <div class="monitor-line">
-                    <span>MEM:</span>
-                    <div class="progress-bar"><div class="progress-fill" style="animation-delay: 1s;"></div></div>
-                </div>
-                <div class="monitor-line">
-                    <span>NET:</span>
-                    <div class="progress-bar"><div class="progress-fill" style="animation-delay: 1.5s;"></div></div>
-                </div>
-                <div style="margin-top: 10px; font-size: 10px; color: var(--accent-color);">
-                    UPTIME: <span id="uptime">00:00:00</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Widgets Section -->
-    <section class="widgets-section">
-        <div class="container">
-            <h2 class="section-title glitch" data-text="SYSTEM INTERFACE">SYSTEM INTERFACE</h2>
-            <div class="widgets-grid">
-                <div class="widget-container">
-                    <div class="widget-header">
-                        <span>CONNECT 5</span>
-                        <button class="widget-close" data-widget="connect5">&times;</button>
-                    </div>
-                    <div class="connect5-widget" id="connect5-widget">
-                        <div class="game-status" id="game-status">Your turn</div>
-                        <div class="connect5-grid" id="connect5-grid"></div>
-                        <button class="reset-game" id="reset-game">New Game</button>
-                    </div>
-                </div>
-                
-                <div class="widget-container">
-                    <div class="widget-header">
-                        <span>REAL-TIME METRICS</span>
-                        <button class="widget-close" data-widget="analytics">&times;</button>
-                    </div>
-                    <div class="analytics-widget" id="analytics-widget">
-                        <div id="analytics-content">
-                            <div class="metric-line">
-                                <span>VISITORS:</span>
-                                <span class="metric-value" id="visitors">0</span>
-                            </div>
-                            <div class="metric-line">
-                                <span>ENGAGEMENT:</span>
-                                <span class="metric-value" id="engagement">0%</span>
-                            </div>
-                            <div class="metric-line">
-                                <span>NEURAL_SYNC:</span>
-                                <span class="metric-value" id="neural">0.0%</span>
-                            </div>
-                            <div class="metric-line">
-                                <span>BANDWIDTH:</span>
-                                <span class="metric-value" id="bandwidth">0 MB/s</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -229,48 +171,28 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Analytics Widget in About Section -->
-            <div class="widget-container about-widget">
-                <div class="widget-header">
-                    <span>NEURAL_ANALYTICS</span>
-                    <button class="widget-close" data-widget="analytics2">&times;</button>
-                </div>
-                <div class="analytics-widget" id="analytics-widget-2">
-                    <div id="analytics-content-2">
-                        <div class="metric-line">
-                            <span>CORE_TEMP:</span>
-                            <span class="metric-value" id="core-temp">0°C</span>
-                        </div>
-                        <div class="metric-line">
-                            <span>POWER_DRAW:</span>
-                            <span class="metric-value" id="power-draw">0W</span>
-                        </div>
-                        <div class="metric-line">
-                            <span>SYNC_RATE:</span>
-                            <span class="metric-value" id="sync-rate">0%</span>
-                        </div>
-                        <div class="metric-line">
-                            <span>STABILITY:</span>
-                            <span class="metric-value" id="stability">0%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">WELCOME TO THE EXPERIMENT</h2>
+            <h2 class="section-title">JOIN THE REVOLUTION</h2>
             <p class="contact-subtitle">Ready to be part of the future? Get in touch.</p>
             
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
                         <span class="contact-label">EMAIL</span>
-                        <span class="contact-value">contact@arsenalstudios.dev</span>
+                        <span class="contact-value">arsenal@arsenal-studios.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">PHONE</span>
+                        <span class="contact-value">+1 (864) 794-4908</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LOCATION</span>
+                        <span class="contact-value">THE DIGITAL REALM</span>
                     </div>
                 </div>
                 
@@ -285,15 +207,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Arsenal Studios LLC. All rights reserved. The future is now.</p>
+            <p>&copy; 2024 Arsenal Studios LLC. All rights reserved. The future is now.</p>
         </div>
     </footer>
 
-    <div id="spaceships-container"></div>
-
-    <script src="js/core.js"></script>
-    <script src="js/effects.js"></script>
-    <script src="js/widgets.js"></script>
-    <script src="js/spaceships.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
