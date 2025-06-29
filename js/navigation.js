@@ -4,14 +4,30 @@ export function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            
+            // Check if it's an external link or page navigation
+            if (targetId.startsWith('/') || targetId.startsWith('http')) {
+                // Let the browser handle page navigation normally
+                return;
+            }
+            
+            // Handle same-page navigation for home page
+            if (targetId.startsWith('#') && window.location.pathname === '/') {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+            
+            // Handle navigation from games page back to home sections
+            if (targetId.startsWith('/#')) {
+                e.preventDefault();
+                window.location.href = targetId;
             }
         });
     });
