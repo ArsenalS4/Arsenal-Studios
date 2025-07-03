@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Tic-Tac-Toe - Arsenal Studios LLC</title>
     
-    <meta name="description" content="Play Cyber Tic-Tac-Toe with a twist - only 3 pieces allowed on the board at once. Challenge the AI or play against other players online.">
+    <meta name="description" content="Play multiplayer Cyber Tic-Tac-Toe with a twist - only 3 pieces allowed on the board at once. Real-time multiplayer cyberpunk gaming experience.">
     <meta name="theme-color" content="#6366f1">
     
     <link rel="stylesheet" href="styles/base.css">
@@ -64,8 +64,6 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: uppercase;
-            text-decoration: none;
-            display: inline-block;
         }
         
         .mode-btn:hover,
@@ -225,6 +223,7 @@
             max-width: 600px;
             width: 100%;
             text-align: center;
+            display: none;
         }
         
         .ai-title {
@@ -339,273 +338,6 @@
             text-shadow: 0 0 10px var(--primary-color);
         }
         
-        .lobby-section {
-            display: none;
-            background: var(--bg-dark);
-            border: 2px solid var(--border-color);
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 800px;
-            width: 100%;
-        }
-        
-        .lobby-section.active {
-            display: block;
-        }
-        
-        .username-setup {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .username-input {
-            background: var(--bg-darker);
-            border: 2px solid var(--border-color);
-            color: var(--text-primary);
-            font-family: 'Space Mono', monospace;
-            padding: 1rem;
-            margin: 0.5rem;
-            font-size: 1rem;
-            width: 250px;
-        }
-        
-        .username-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
-        }
-        
-        .join-lobby-btn {
-            background: var(--primary-color);
-            border: none;
-            color: var(--bg-dark);
-            padding: 1rem 2rem;
-            font-family: 'Space Mono', monospace;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            margin-left: 1rem;
-        }
-        
-        .join-lobby-btn:hover {
-            box-shadow: 0 0 20px var(--primary-color);
-            transform: translateY(-2px);
-        }
-        
-        .lobby-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        
-        .online-players {
-            background: var(--bg-darker);
-            border: 2px solid var(--border-color);
-            padding: 1.5rem;
-        }
-        
-        .players-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .players-title {
-            font-family: 'Orbitron', monospace;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-        }
-        
-        .players-count {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        
-        .player-filter {
-            background: var(--bg-dark);
-            border: 2px solid var(--border-color);
-            color: var(--text-primary);
-            font-family: 'Space Mono', monospace;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            width: 100%;
-            font-size: 0.9rem;
-        }
-        
-        .player-filter:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-        
-        .player-list {
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        
-        .player-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            margin-bottom: 0.5rem;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-        
-        .player-item:hover {
-            border-color: var(--primary-color);
-            background: rgba(99, 102, 241, 0.1);
-        }
-        
-        .player-item.current-user {
-            border-color: var(--accent-color);
-            background: rgba(168, 85, 247, 0.1);
-        }
-        
-        .player-item.in-game {
-            opacity: 0.5;
-            border-color: var(--text-muted);
-        }
-        
-        .player-details {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .player-status {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-        
-        .challenge-btn {
-            background: transparent;
-            border: 2px solid var(--accent-color);
-            color: var(--accent-color);
-            padding: 0.5rem 1rem;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-        
-        .challenge-btn:hover {
-            background: var(--accent-color);
-            color: var(--bg-dark);
-        }
-        
-        .challenge-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        
-        .game-challenges {
-            background: var(--bg-darker);
-            border: 2px solid var(--border-color);
-            padding: 1.5rem;
-        }
-        
-        .challenges-title {
-            font-family: 'Orbitron', monospace;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .challenge-item {
-            background: var(--bg-dark);
-            border: 1px solid var(--border-color);
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 4px;
-        }
-        
-        .challenge-from {
-            color: var(--text-primary);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .challenge-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .accept-btn, .decline-btn {
-            padding: 0.5rem 1rem;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            border: 2px solid;
-        }
-        
-        .accept-btn {
-            background: transparent;
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-        
-        .accept-btn:hover {
-            background: var(--primary-color);
-            color: var(--bg-dark);
-        }
-        
-        .decline-btn {
-            background: transparent;
-            border-color: var(--text-muted);
-            color: var(--text-muted);
-        }
-        
-        .decline-btn:hover {
-            background: var(--text-muted);
-            color: var(--bg-dark);
-        }
-        
-        .lobby-status {
-            text-align: center;
-            color: var(--text-secondary);
-            margin: 1rem 0;
-            font-style: italic;
-        }
-        
-        .current-game-info {
-            background: var(--bg-darker);
-            border: 2px solid var(--primary-color);
-            padding: 1rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            display: none;
-        }
-        
-        .current-game-info.active {
-            display: block;
-        }
-        
-        .leave-game-btn {
-            background: transparent;
-            border: 2px solid var(--text-muted);
-            color: var(--text-muted);
-            padding: 0.8rem 1.5rem;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            margin-top: 1rem;
-        }
-        
-        .leave-game-btn:hover {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-        }
-        
         @media (max-width: 768px) {
             .game-board {
                 width: 300px;
@@ -641,20 +373,6 @@
             .mode-btn {
                 width: 100%;
             }
-            
-            .lobby-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .username-input {
-                width: 200px;
-            }
-            
-            .join-lobby-btn {
-                margin-left: 0;
-                margin-top: 1rem;
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -668,54 +386,13 @@
         <div class="game-header">
             <h1 class="game-title glitch" data-text="CYBER TIC-TAC-TOE">CYBER TIC-TAC-TOE</h1>
             <p class="game-subtitle">Tactical grid combat with the 3-piece rule</p>
-            
-            <!-- Game Mode Selector -->
-            <div class="game-mode-selector">
-                <button class="mode-btn active">VS AI</button>
-                <a href="/multiplayer-tictactoe.html" class="mode-btn">MULTIPLAYER</a>
-            </div>
         </div>
         
-        <!-- Username Setup (only for multiplayer) -->
-        <div class="username-setup" id="usernameSetup" style="display: none;">
-            <h3 style="color: var(--primary-color); font-family: 'Orbitron', monospace; margin-bottom: 1rem;">ENTER THE ARENA</h3>
-            <input type="text" id="usernameInput" class="username-input" placeholder="Enter your callsign..." maxlength="20">
-            <button id="joinLobbyBtn" class="join-lobby-btn">JOIN LOBBY</button>
+        <div class="game-mode-selector">
+            <button class="mode-btn active" data-mode="ai">VS AI</button>
+            <button class="mode-btn" data-mode="multiplayer">MULTIPLAYER</button>
         </div>
         
-        <!-- Lobby Section (only for multiplayer) -->
-        <div class="lobby-section" id="lobbySection">
-            <div class="lobby-status" id="lobbyStatus">Connected to Arsenal Network</div>
-            
-            <div class="lobby-content">
-                <div class="online-players">
-                    <div class="players-header">
-                        <h3 class="players-title">ONLINE OPERATORS</h3>
-                        <span class="players-count" id="playersCount">0 online</span>
-                    </div>
-                    <input type="text" class="player-filter" id="playerFilter" placeholder="Filter operators...">
-                    <div class="player-list" id="playerList">
-                        <div class="lobby-status">Scanning for operators...</div>
-                    </div>
-                </div>
-                
-                <div class="game-challenges">
-                    <h3 class="challenges-title">INCOMING CHALLENGES</h3>
-                    <div id="challengesList">
-                        <div class="lobby-status">No pending challenges</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Current Game Info -->
-        <div class="current-game-info" id="currentGameInfo">
-            <h3 style="color: var(--primary-color); font-family: 'Orbitron', monospace;">MATCH IN PROGRESS</h3>
-            <p id="gameInfoText">Playing against <span id="opponentName"></span></p>
-            <button id="leaveGameBtn" class="leave-game-btn">FORFEIT MATCH</button>
-        </div>
-        
-        <!-- AI Controls -->
         <div class="ai-controls" id="aiControls">
             <h3 class="ai-title">AI OPPONENT SETTINGS</h3>
             <div class="difficulty-selector">
@@ -735,16 +412,16 @@
         
         <div class="game-info" id="gameInfo">
             <div class="player-info">
-                <img id="player1Avatar" class="player-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23333' stroke='%236366f1' stroke-width='2'/%3E%3Ctext x='20' y='26' text-anchor='middle' fill='%236366f1' font-family='monospace' font-size='12'%3EP1%3C/text%3E%3C/svg%3E" alt="Player 1">
-                <span id="player1Name" class="player-name">Human Player</span>
+                <img id="player1Avatar" class="player-avatar" src="" alt="Player 1">
+                <span id="player1Name" class="player-name">Player 1</span>
                 <span class="player-symbol">(X)</span>
             </div>
             <div class="current-turn" id="turnIndicator">
                 Click NEW GAME to start
             </div>
             <div class="player-info">
-                <img id="player2Avatar" class="player-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23333' stroke='%238b5cf6' stroke-width='2'/%3E%3Ctext x='20' y='26' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='16'%3EAI%3C/text%3E%3C/svg%3E" alt="AI Opponent">
-                <span id="player2Name" class="player-name">AI Opponent</span>
+                <img id="player2Avatar" class="player-avatar" src="" alt="Player 2">
+                <span id="player2Name" class="player-name">Player 2</span>
                 <span class="player-symbol">(O)</span>
             </div>
         </div>
@@ -768,8 +445,8 @@
                 <li>Each player can only have <strong>3 pieces</strong> on the board at once</li>
                 <li>When you place a 4th piece, your <strong>oldest piece disappears</strong></li>
                 <li>First to get 3 in a row (horizontal, vertical, or diagonal) wins</li>
-                <li>Choose your AI difficulty level to match your skills</li>
-                <li>For multiplayer battles, click MULTIPLAYER above</li>
+                <li>Games continue until someone achieves victory</li>
+                <li>In multiplayer mode, moves sync across all connected players</li>
             </ul>
         </div>
     </div>
@@ -785,6 +462,7 @@
     <script type="module">
         class CyberTicTacToe {
             constructor() {
+                this.gameMode = 'ai';
                 this.aiDifficulty = 'easy';
                 this.board = Array(9).fill('');
                 this.currentPlayer = 'X';
@@ -794,99 +472,14 @@
                 this.isPlayerTurn = true;
                 this.gameCount = 0;
                 
-                // Multiplayer properties
-                this.room = null;
-                this.username = '';
-                this.inLobby = false;
-                this.inGame = false;
-                this.currentOpponent = null;
-                this.mySymbol = null;
-                this.challenges = new Map();
-                this.playerFilter = '';
-                
                 this.init();
             }
             
-            async init() {
+            init() {
                 this.createBoard();
                 this.setupEventListeners();
                 this.setupAIMode();
                 this.updateDisplay();
-                
-                // Initialize WebsimSocket
-                const { WebsimSocket } = await import('@websim/websim-socket');
-                this.room = new WebsimSocket();
-                await this.room.initialize();
-                this.setupMultiplayerEvents();
-                
-                console.log('Game initialized, client ID:', this.room.clientId);
-            }
-            
-            setupMultiplayerEvents() {
-                // Subscribe to presence updates (other players)
-                this.room.subscribePresence((presence) => {
-                    console.log('Presence updated:', presence);
-                    if (this.inLobby) {
-                        this.updatePlayersList();
-                    }
-                });
-                
-                // Subscribe to room state updates (game state, challenges)
-                this.room.subscribeRoomState((roomState) => {
-                    console.log('Room state updated:', roomState);
-                    if (roomState.challenges) {
-                        this.updateChallenges(roomState.challenges);
-                    }
-                    if (roomState.games && this.inGame) {
-                        this.handleGameStateUpdate(roomState.games);
-                    }
-                });
-                
-                // Handle custom messages
-                this.room.onmessage = (event) => {
-                    console.log('Received message:', event.data);
-                    const { type, data, clientId, username } = event.data;
-                    
-                    switch (type) {
-                        case 'connected':
-                            console.log(`Player connected: ${username}`);
-                            if (this.inLobby) {
-                                setTimeout(() => this.updatePlayersList(), 500);
-                            }
-                            break;
-                        case 'disconnected':
-                            console.log(`Player disconnected: ${username}`);
-                            if (this.inLobby) {
-                                setTimeout(() => this.updatePlayersList(), 500);
-                            }
-                            break;
-                        case 'challenge_sent':
-                            if (data.to === this.room.clientId) {
-                                this.handleChallengeReceived(data);
-                            }
-                            break;
-                        case 'challenge_accepted':
-                            if (data.challengerId === this.room.clientId) {
-                                this.handleChallengeAccepted(data);
-                            }
-                            break;
-                        case 'challenge_declined':
-                            if (data.challengerId === this.room.clientId) {
-                                this.handleChallengeDeclined(data);
-                            }
-                            break;
-                        case 'game_move':
-                            if (this.currentOpponent === clientId) {
-                                this.handleOpponentMove(data);
-                            }
-                            break;
-                        case 'game_ended':
-                            if (this.currentOpponent === clientId) {
-                                this.handleGameEnded(data);
-                            }
-                            break;
-                    }
-                };
             }
             
             createBoard() {
@@ -912,37 +505,14 @@
                         this.switchGameMode();
                     });
                 });
-
-                // AI Difficulty buttons
+                
+                // Difficulty buttons
                 document.querySelectorAll('.difficulty-btn').forEach(btn => {
                     btn.addEventListener('click', (e) => {
                         document.querySelectorAll('.difficulty-btn').forEach(b => b.classList.remove('active'));
                         e.target.classList.add('active');
                         this.aiDifficulty = e.target.dataset.difficulty;
-                        console.log('AI difficulty set to:', this.aiDifficulty);
                     });
-                });
-
-                // Username and lobby setup
-                document.getElementById('joinLobbyBtn').addEventListener('click', () => {
-                    this.joinLobby();
-                });
-
-                document.getElementById('usernameInput').addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') {
-                        this.joinLobby();
-                    }
-                });
-                
-                // Player filter
-                document.getElementById('playerFilter').addEventListener('input', (e) => {
-                    this.playerFilter = e.target.value.toLowerCase();
-                    this.updatePlayersList();
-                });
-                
-                // Leave game
-                document.getElementById('leaveGameBtn').addEventListener('click', () => {
-                    this.leaveGame();
                 });
                 
                 // Control buttons
@@ -950,405 +520,25 @@
                 document.getElementById('resetBtn').addEventListener('click', () => this.resetScore());
             }
             
-            joinLobby() {
-                const usernameInput = document.getElementById('usernameInput');
-                const username = usernameInput.value.trim();
-                
-                if (!username || username.length < 2) {
-                    alert('Please enter a valid callsign (at least 2 characters)');
-                    return;
-                }
-                
-                if (username.length > 20) {
-                    alert('Callsign must be 20 characters or less');
-                    return;
-                }
-                
-                this.username = username;
-                this.inLobby = true;
-                
-                console.log('Joining lobby as:', username);
-                
-                // Update presence with username and status
-                this.room.updatePresence({
-                    username: this.username,
-                    status: 'lobby',
-                    inGame: false,
-                    lastSeen: Date.now()
-                });
-                
-                // Hide username setup, show lobby
-                document.getElementById('usernameSetup').style.display = 'none';
-                document.getElementById('lobbySection').classList.add('active');
-                
-                // Update lobby status
-                document.getElementById('lobbyStatus').textContent = `Connected as ${username}`;
-                
-                // Force update players list
-                setTimeout(() => {
-                    this.updatePlayersList();
-                }, 1000);
-            }
-            
-            updatePlayersList() {
-                const playerList = document.getElementById('playerList');
-                const playersCount = document.getElementById('playersCount');
-                
-                console.log('Updating players list');
-                console.log('Current peers:', this.room.peers);
-                console.log('Current presence:', this.room.presence);
-                
-                // Get all connected peers with presence data
-                const allPeers = Object.keys(this.room.presence)
-                    .map(peerId => ({
-                        id: peerId,
-                        ...this.room.peers[peerId],
-                        presence: this.room.presence[peerId]
-                    }))
-                    .filter(peer => peer.presence && peer.presence.username && peer.presence.status === 'lobby');
-                
-                console.log('Lobby players:', allPeers);
-                
-                // Apply search filter
-                const filteredPlayers = allPeers.filter(player => {
-                    if (!this.playerFilter) return true;
-                    return player.presence.username.toLowerCase().includes(this.playerFilter.toLowerCase());
-                });
-                
-                playersCount.textContent = `${allPeers.length} online`;
-                
-                if (filteredPlayers.length === 0) {
-                    playerList.innerHTML = '<div class="lobby-status">No operators found</div>';
-                    return;
-                }
-                
-                playerList.innerHTML = '';
-                
-                filteredPlayers.forEach(player => {
-                    const isCurrentUser = player.id === this.room.clientId;
-                    const isInGame = player.presence.inGame;
-                    
-                    console.log('Adding player to list:', player.presence.username, player.id);
-                    
-                    const playerItem = document.createElement('div');
-                    playerItem.className = 'player-item';
-                    
-                    if (isCurrentUser) {
-                        playerItem.classList.add('current-user');
-                    }
-                    
-                    if (isInGame) {
-                        playerItem.classList.add('in-game');
-                    }
-                    
-                    const avatarUrl = player.avatarUrl || `https://images.websim.com/avatar/${player.presence.username}`;
-                    
-                    playerItem.innerHTML = `
-                        <div class="player-details">
-                            <img src="${avatarUrl}" alt="${player.presence.username}" class="player-avatar">
-                            <div>
-                                <div class="player-name">${player.presence.username}</div>
-                                <div class="player-status">${isCurrentUser ? 'You' : isInGame ? 'In Game' : 'Available'}</div>
-                            </div>
-                        </div>
-                        ${!isCurrentUser && !isInGame && !this.inGame ? 
-                            `<button class="challenge-btn" onclick="window.game.sendChallenge('${player.id}')">Challenge</button>` : 
-                            ''
-                        }
-                    `;
-                    
-                    playerList.appendChild(playerItem);
-                });
-            }
-            
-            sendChallenge(playerId) {
-                console.log('Sending challenge to:', playerId);
-                
-                const targetPresence = this.room.presence[playerId];
-                
-                if (!targetPresence) {
-                    console.error('Target player not found:', playerId);
-                    return;
-                }
-                
-                const challengeId = `${this.room.clientId}_${playerId}_${Date.now()}`;
-                
-                console.log('Challenge ID:', challengeId);
-                
-                // Update room state with challenge
-                const currentChallenges = this.room.roomState.challenges || {};
-                const updatedChallenges = {
-                    ...currentChallenges,
-                    [challengeId]: {
-                        id: challengeId,
-                        from: this.room.clientId,
-                        to: playerId,
-                        fromUsername: this.username,
-                        toUsername: targetPresence.username,
-                        timestamp: Date.now(),
-                        status: 'pending'
-                    }
-                };
-                
-                this.room.updateRoomState({ challenges: updatedChallenges });
-                
-                // Also send direct message
-                this.room.send({
-                    type: 'challenge_sent',
-                    data: {
-                        id: challengeId,
-                        from: this.room.clientId,
-                        to: playerId,
-                        fromUsername: this.username,
-                        toUsername: targetPresence.username
-                    }
-                });
-                
-                // Update UI
-                document.getElementById('lobbyStatus').textContent = 
-                    `Challenge sent to ${targetPresence.username}`;
-                
-                console.log('Challenge sent successfully');
-            }
-            
-            handleChallengeReceived(data) {
-                console.log('Challenge received:', data);
-                
-                // Update challenges display immediately
-                this.updateChallenges(this.room.roomState.challenges || {});
-            }
-            
-            updateChallenges(challenges) {
-                console.log('Updating challenges:', challenges);
-                
-                const challengesList = document.getElementById('challengesList');
-                
-                // Find challenges for current user
-                const myPendingChallenges = Object.values(challenges || {})
-                    .filter(challenge => 
-                        challenge.to === this.room.clientId && 
-                        challenge.status === 'pending'
-                    );
-                
-                console.log('My pending challenges:', myPendingChallenges);
-                
-                if (myPendingChallenges.length === 0) {
-                    challengesList.innerHTML = '<div class="lobby-status">No pending challenges</div>';
-                    return;
-                }
-                
-                challengesList.innerHTML = '';
-                
-                myPendingChallenges.forEach(challenge => {
-                    const challengeItem = document.createElement('div');
-                    challengeItem.className = 'challenge-item';
-                    
-                    challengeItem.innerHTML = `
-                        <div class="challenge-from">Challenge from ${challenge.fromUsername}</div>
-                        <div class="challenge-actions">
-                            <button class="accept-btn" onclick="window.game.acceptChallenge('${challenge.id}')">Accept</button>
-                            <button class="decline-btn" onclick="window.game.declineChallenge('${challenge.id}')">Decline</button>
-                        </div>
-                    `;
-                    
-                    challengesList.appendChild(challengeItem);
-                });
-            }
-            
-            acceptChallenge(challengeId) {
-                console.log('Accepting challenge:', challengeId);
-                
-                const currentChallenges = this.room.roomState.challenges || {};
-                const challenge = currentChallenges[challengeId];
-                
-                if (!challenge) {
-                    console.error('Challenge not found:', challengeId);
-                    return;
-                }
-                
-                // Update challenge status and remove from room state
-                const updatedChallenges = { ...currentChallenges };
-                delete updatedChallenges[challengeId];
-                this.room.updateRoomState({ challenges: updatedChallenges });
-                
-                // Start game
-                this.startMultiplayerGame(challenge.from, challenge.fromUsername);
-                
-                // Notify the challenger
-                this.room.send({
-                    type: 'challenge_accepted',
-                    data: {
-                        challengeId,
-                        challengerId: challenge.from,
-                        acceptedBy: this.username,
-                        acceptedById: this.room.clientId
-                    }
-                });
-                
-                console.log('Challenge accepted, starting game');
-            }
-            
-            declineChallenge(challengeId) {
-                console.log('Declining challenge:', challengeId);
-                
-                const currentChallenges = this.room.roomState.challenges || {};
-                const challenge = currentChallenges[challengeId];
-                
-                if (!challenge) {
-                    console.error('Challenge not found:', challengeId);
-                    return;
-                }
-                
-                // Remove challenge from room state
-                const updatedChallenges = { ...currentChallenges };
-                delete updatedChallenges[challengeId];
-                this.room.updateRoomState({ challenges: updatedChallenges });
-                
-                // Notify the challenger
-                this.room.send({
-                    type: 'challenge_declined',
-                    data: {
-                        challengeId,
-                        challengerId: challenge.from,
-                        declinedBy: this.username
-                    }
-                });
-                
-                console.log('Challenge declined');
-            }
-            
-            handleChallengeAccepted(data) {
-                console.log('Challenge was accepted:', data);
-                
-                // Start the game as the challenger
-                this.startMultiplayerGame(data.acceptedById, data.acceptedBy);
-                
-                document.getElementById('lobbyStatus').textContent = 
-                    `${data.acceptedBy} accepted your challenge!`;
-            }
-            
-            handleChallengeDeclined(data) {
-                console.log('Challenge was declined:', data);
-                
-                document.getElementById('lobbyStatus').textContent = 
-                    `${data.declinedBy} declined your challenge`;
-            }
-            
-            handleGameEnded(data) {
-                console.log('Game ended by opponent:', data);
-                
-                if (data.reason === 'forfeit') {
-                    document.getElementById('gameStatus').textContent = 
-                        'Opponent forfeited - You win!';
-                } else if (data.reason === 'win') {
-                    // Game ended normally, already handled by local win check
-                }
-                
-                setTimeout(() => {
-                    this.endMultiplayerGame();
-                }, 3000);
-            }
-            
-            startMultiplayerGame(opponentId, opponentUsername) {
-                this.inGame = true;
-                this.currentOpponent = opponentId;
-                this.gameMode = 'multiplayer';
-                
-                // Determine who goes first (X) - player with smaller ID
-                this.mySymbol = this.room.clientId < opponentId ? 'X' : 'O';
-                
-                // Update presence
-                this.room.updatePresence({
-                    username: this.username,
-                    status: 'game',
-                    inGame: true,
-                    opponent: opponentId
-                });
-                
-                // Hide lobby, show game
-                document.getElementById('lobbySection').classList.remove('active');
-                document.getElementById('currentGameInfo').classList.add('active');
-                document.getElementById('opponentName').textContent = opponentUsername;
-                
-                // Setup game UI for multiplayer
-                this.setupMultiplayerGameUI(opponentUsername);
-                
-                // Start the game
-                this.startNewGame();
-            }
-            
-            setupMultiplayerGameUI(opponentUsername) {
-                const player1Name = document.getElementById('player1Name');
-                const player2Name = document.getElementById('player2Name');
-                const player1Avatar = document.getElementById('player1Avatar');
-                const player2Avatar = document.getElementById('player2Avatar');
-                
-                if (this.mySymbol === 'X') {
-                    player1Name.textContent = this.username;
-                    player2Name.textContent = opponentUsername;
-                    player1Avatar.src = this.room.peers[this.room.clientId]?.avatarUrl || `https://images.websim.com/avatar/${this.username}`;
-                    player2Avatar.src = this.room.peers[this.currentOpponent]?.avatarUrl || `https://images.websim.com/avatar/${opponentUsername}`;
-                } else {
-                    player1Name.textContent = opponentUsername;
-                    player2Name.textContent = this.username;
-                    player1Avatar.src = this.room.peers[this.currentOpponent]?.avatarUrl || `https://images.websim.com/avatar/${opponentUsername}`;
-                    player2Avatar.src = this.room.peers[this.room.clientId]?.avatarUrl || `https://images.websim.com/avatar/${this.username}`;
-                }
-            }
-            
             switchGameMode() {
                 const aiControls = document.getElementById('aiControls');
-                const usernameSetup = document.getElementById('usernameSetup');
-                const lobbySection = document.getElementById('lobbySection');
-                const currentGameInfo = document.getElementById('currentGameInfo');
+                const playersList = document.getElementById('playersList');
                 
                 if (this.gameMode === 'ai') {
-                    // Show AI controls, hide multiplayer elements
                     aiControls.style.display = 'block';
-                    usernameSetup.style.display = 'none';
-                    lobbySection.classList.remove('active');
-                    currentGameInfo.classList.remove('active');
-                    
-                    // Exit lobby if in lobby
-                    if (this.inLobby) {
-                        this.exitLobby();
-                    }
-                    
+                    playersList.style.display = 'none';
                     this.setupAIMode();
                 } else {
-                    // Hide AI controls, show multiplayer setup
                     aiControls.style.display = 'none';
-                    
-                    // If not in lobby and not in game, show username setup
-                    if (!this.inLobby && !this.inGame) {
-                        usernameSetup.style.display = 'block';
-                        lobbySection.classList.remove('active');
-                        currentGameInfo.classList.remove('active');
-                    }
+                    playersList.style.display = 'block';
+                    this.setupMultiplayerMode();
                 }
                 
                 this.startNewGame();
-            }
-
-            exitLobby() {
-                this.inLobby = false;
-                this.inGame = false;
-                
-                // Update presence to offline
-                this.room.updatePresence({
-                    status: 'offline'
-                });
-                
-                // Reset UI based on current mode
-                if (this.gameMode === 'multiplayer') {
-                    document.getElementById('usernameSetup').style.display = 'block';
-                    document.getElementById('lobbySection').classList.remove('active');
-                    document.getElementById('currentGameInfo').classList.remove('active');
-                }
             }
             
             setupAIMode() {
-                document.getElementById('player1Avatar').src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Ccircle cx="20" cy="20" r="18" fill="%23333" stroke="%236366f1" stroke-width="2"/%3E%3Ctext x="20" y="26" text-anchor="middle" fill="%236366f1" font-family="monospace" font-size="12"%3EP1%3C/text%3E%3C/svg%3E';
+                document.getElementById('player1Avatar').src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Ccircle cx="20" cy="20" r="18" fill="%23333" stroke="%236366f1" stroke-width="2"/%3E%3Ctext x="20" y="26" text-anchor="middle" fill="%236366f1" font-family="monospace" font-size="12"%3EYou%3C/text%3E%3C/svg%3E';
                 document.getElementById('player1Name').textContent = 'Human Player';
                 document.getElementById('player2Avatar').src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Ccircle cx="20" cy="20" r="18" fill="%23333" stroke="%238b5cf6" stroke-width="2"/%3E%3Ctext x="20" y="26" text-anchor="middle" fill="%238b5cf6" font-family="monospace" font-size="16"%3EAI%3C/text%3E%3C/svg%3E';
                 document.getElementById('player2Name').textContent = 'AI Opponent';
@@ -1385,11 +575,6 @@
                 
                 if (this.gameMode === 'ai' && !this.isPlayerTurn) {
                     console.log('Not player turn in AI mode');
-                    return;
-                }
-                
-                if (this.gameMode === 'multiplayer' && this.currentPlayer !== this.mySymbol) {
-                    console.log('Not my turn in multiplayer');
                     return;
                 }
                 
@@ -1431,19 +616,6 @@
                     setTimeout(() => newCell.classList.remove('fadein'), 500);
                 }
                 
-                // Send move to opponent if in multiplayer
-                if (this.gameMode === 'multiplayer' && this.inGame) {
-                    this.room.send({
-                        type: 'game_move',
-                        data: {
-                            cellIndex,
-                            player: this.currentPlayer,
-                            board: this.board,
-                            playerPieces: this.playerPieces
-                        }
-                    });
-                }
-                
                 this.updateBoard();
                 
                 // Check for win condition
@@ -1462,8 +634,8 @@
                     if (this.currentPlayer === 'O') {
                         setTimeout(() => this.makeAIMove(), 800);
                     }
-                } else if (this.gameMode === 'multiplayer') {
-                    this.isPlayerTurn = this.currentPlayer === this.mySymbol;
+                } else {
+                    this.isPlayerTurn = true; // In multiplayer, both are "player turns"
                 }
                 
                 this.updateDisplay();
@@ -1612,50 +784,6 @@
                     this.score[result]++;
                 }
                 
-                // In multiplayer, notify opponent and end the game
-                if (this.gameMode === 'multiplayer' && this.inGame) {
-                    this.room.send({
-                        type: 'game_ended',
-                        targetClient: this.currentOpponent,
-                        data: {
-                            reason: 'win',
-                            winner: result
-                        }
-                    });
-                    
-                    setTimeout(() => {
-                        this.endMultiplayerGame();
-                    }, 3000); // Show result for 3 seconds
-                }
-                
-                this.updateDisplay();
-            }
-            
-            handleOpponentMove(data) {
-                console.log('Received opponent move:', data);
-                
-                if (!this.inGame || this.currentPlayer === this.mySymbol) {
-                    return; // Not my turn or not in game
-                }
-                
-                // Apply the opponent's move
-                this.board = data.board;
-                this.playerPieces = data.playerPieces;
-                this.currentPlayer = data.player;
-                
-                this.updateBoard();
-                
-                // Check for win condition
-                const winner = this.checkWinner();
-                if (winner) {
-                    this.endGame(winner);
-                    return;
-                }
-                
-                // Switch turns
-                this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
-                this.isPlayerTurn = this.currentPlayer === this.mySymbol;
-                
                 this.updateDisplay();
             }
             
@@ -1706,11 +834,83 @@
                         turnIndicator.textContent = `Player ${this.currentPlayer}'s Turn`;
                         gameStatus.textContent = `Player ${this.currentPlayer}, make your move!`;
                     }
+                }
+                
+                // Update piece counts
+                const xCount = this.playerPieces.X.length;
+                const oCount = this.playerPieces.O.length;
+                gameStatus.textContent += ` | Pieces: X:${xCount}/3, O:${oCount}/3`;
+            }
+            
+            updatePlayersList() {
+                const container = document.getElementById('playersContainer');
+                const peers = Object.values(this.room.peers);
+                
+                if (peers.length === 0) {
+                    container.innerHTML = '<div class="waiting-message">Connecting to Arsenal Network...</div>';
+                    return;
+                }
+                
+                container.innerHTML = '';
+                
+                peers.forEach((peer, index) => {
+                    const playerItem = document.createElement('div');
+                    playerItem.className = 'player-item';
                     
-                    // Update piece counts
-                    const xCount = this.playerPieces.X.length;
-                    const oCount = this.playerPieces.O.length;
-                    gameStatus.textContent += ` | Pieces: X:${xCount}/3, O:${oCount}/3`;
+                    if (peer.id === this.room.clientId) {
+                        playerItem.classList.add('current-player');
+                    }
+                    
+                    let role = index === 0 ? 'Player X' : index === 1 ? 'Player O' : 'Spectator';
+                    
+                    playerItem.innerHTML = `
+                        <img src="${peer.avatarUrl}" alt="${peer.username}" class="player-avatar">
+                        <span class="player-name">${peer.username}</span>
+                        <span style="color: var(--text-muted); margin-left: auto;">${role}</span>
+                    `;
+                    
+                    container.appendChild(playerItem);
+                });
+                
+                // Update player info for multiplayer
+                if (peers.length >= 2) {
+                    document.getElementById('player1Avatar').src = peers[0].avatarUrl;
+                    document.getElementById('player1Name').textContent = peers[0].username;
+                    document.getElementById('player2Avatar').src = peers[1].avatarUrl;
+                    document.getElementById('player2Name').textContent = peers[1].username;
+                    
+                    // Determine if this is my turn in multiplayer
+                    const myIndex = peers.findIndex(p => p.id === this.room.clientId);
+                    this.mySymbol = myIndex === 0 ? 'X' : myIndex === 1 ? 'O' : null;
+                    this.isMyTurn = this.mySymbol === this.currentPlayer;
+                }
+            }
+            
+            createMatrixRain() {
+                const matrixContainer = document.querySelector('.matrix-rain');
+                const characters = '01XO◆◇▲▼';
+                
+                for (let i = 0; i < 15; i++) {
+                    setTimeout(() => {
+                        const column = document.createElement('div');
+                        column.className = 'matrix-column';
+                        column.style.left = Math.random() * window.innerWidth + 'px';
+                        column.style.animationDuration = (Math.random() * 5 + 3) + 's';
+                        
+                        let text = '';
+                        for (let j = 0; j < 12; j++) {
+                            text += characters.charAt(Math.floor(Math.random() * characters.length)) + '<br>';
+                        }
+                        column.innerHTML = text;
+                        
+                        matrixContainer.appendChild(column);
+                        
+                        setTimeout(() => {
+                            if (column.parentNode) {
+                                column.parentNode.removeChild(column);
+                            }
+                        }, 8000);
+                    }, Math.random() * 3000);
                 }
             }
         }
@@ -1718,7 +918,7 @@
         // Initialize the game when the page loads
         document.addEventListener('DOMContentLoaded', () => {
             console.log('Initializing Cyber Tic-Tac-Toe');
-            window.game = new CyberTicTacToe();
+            new CyberTicTacToe();
         });
     </script>
 </body>
