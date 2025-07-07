@@ -39,34 +39,34 @@ class HackSystem {
         ];
         this.rewards = [
             {
-                title: "Early Concept Art - Character Design",
+                title: "Training Protocol Documentation",
                 type: "image",
-                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%236366f1' font-family='monospace' font-size='16'%3ECharacter Concept Art%3C/text%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3E[CLASSIFIED]%3C/text%3E%3C/svg%3E",
-                description: "Exclusive early character designs from The Arsenal Experiment"
+                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%236366f1' font-family='monospace' font-size='16'%3ETraining Protocol Files%3C/text%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3E[CLASSIFIED]%3C/text%3E%3C/svg%3E",
+                description: "Classified military training protocols and subject behavioral analysis"
             },
             {
-                title: "Behind the Scenes - Development Footage",
+                title: "Operation Briefing - Truth Revealed",
                 type: "video",
-                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Cpolygon points='160,120 160,180 240,150' fill='%236366f1'/%3E%3Ctext x='200' y='200' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3EDev Footage [CLASSIFIED]%3C/text%3E%3C/svg%3E",
-                description: "Rare development footage showing early gameplay mechanics"
+                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Cpolygon points='160,120 160,180 240,150' fill='%236366f1'/%3E%3Ctext x='200' y='200' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3EOperation Briefing [CLASSIFIED]%3C/text%3E%3C/svg%3E",
+                description: "Hidden footage revealing the true nature of the training program"
             },
             {
-                title: "Exclusive Soundtrack Preview",
+                title: "Subject Communications Archive",
                 type: "audio",
-                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Ccircle cx='200' cy='150' r='80' fill='none' stroke='%236366f1' stroke-width='3'/%3E%3Ctext x='200' y='240' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3ESecret Soundtrack%3C/text%3E%3C/svg%3E",
-                description: "Unreleased cyberpunk soundtrack tracks"
+                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Ccircle cx='200' cy='150' r='80' fill='none' stroke='%236366f1' stroke-width='3'/%3E%3Ctext x='200' y='240' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3ESubject Audio Files%3C/text%3E%3C/svg%3E",
+                description: "Real communications from controlled subjects during operations"
             },
             {
-                title: "Level Design Documents",
+                title: "Military Base Schematics",
                 type: "image",
-                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Crect x='50' y='50' width='300' height='200' fill='none' stroke='%236366f1' stroke-width='2'/%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='14'%3ELevel Blueprints%3C/text%3E%3C/svg%3E",
-                description: "Secret level design documents and maps"
+                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Crect x='50' y='50' width='300' height='200' fill='none' stroke='%236366f1' stroke-width='2'/%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='14'%3EBase Blueprints%3C/text%3E%3C/svg%3E",
+                description: "Classified facility layouts where the experiments took place"
             },
             {
-                title: "Developer Commentary Video",
+                title: "Psychological Evaluation Reports",
                 type: "video",
-                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Crect x='100' y='100' width='200' height='100' fill='%23222' stroke='%236366f1'/%3E%3Cpolygon points='160,130 160,170 190,150' fill='%236366f1'/%3E%3Ctext x='200' y='230' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3EDev Commentary%3C/text%3E%3C/svg%3E",
-                description: "Exclusive developer insights and commentary"
+                content: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23111'/%3E%3Crect x='100' y='100' width='200' height='100' fill='%23222' stroke='%236366f1'/%3E%3Cpolygon points='160,130 160,170 190,150' fill='%236366f1'/%3E%3Ctext x='200' y='230' text-anchor='middle' fill='%238b5cf6' font-family='monospace' font-size='12'%3EPsych Evaluations%3C/text%3E%3C/svg%3E",
+                description: "Psychological impact assessments on both operators and subjects"
             }
         ];
         this.userAnswers = [];
@@ -132,11 +132,11 @@ class HackSystem {
     startHackSequence() {
         const hackLog = document.getElementById('hackLog');
         const messages = [
-            ">>> SCANNING NEURAL PATTERNS...",
-            ">>> SUBJECT CLASSIFICATION: UNKNOWN",
-            ">>> INITIALIZING COGNITIVE CHALLENGE PROTOCOL",
-            ">>> FIRST PUZZLE ACTIVATED",
-            ">>> TYPE 'START' TO BEGIN THE TRIALS"
+            ">>> ACCESSING CLASSIFIED MILITARY DATABASE...",
+            ">>> SUBJECT DESIGNATION: TACTICAL OPERATIVE",
+            ">>> WARNING: UNAUTHORIZED ACCESS TO TRAINING PROTOCOLS",
+            ">>> SIMULATION RECORDS DETECTED",
+            ">>> TYPE 'START' TO ACCESS HIDDEN FILES"
         ];
 
         messages.forEach((msg, index) => {
@@ -332,10 +332,10 @@ class HackSystem {
         rewardsGallery.innerHTML = `
             <div style="text-align: center; margin-bottom: 2rem;">
                 <h2 style="color: var(--accent-color); font-family: 'Orbitron', monospace;">
-                    CLASSIFIED ARSENAL ARCHIVES
+                    CLASSIFIED TRAINING ARCHIVES
                 </h2>
                 <p style="color: var(--primary-color);">
-                    Congratulations! You've unlocked exclusive development content.
+                    Access Granted: You've uncovered the truth behind the "simulations"
                 </p>
             </div>
         `;
