@@ -73,10 +73,7 @@ class HackSystem {
     }
 
     init() {
-        // Start the hack sequence after 1 minute
-        setTimeout(() => {
-            this.initiateHack();
-        }, 60000);
+        // Remove the automatic timer - now manually triggered only
     }
 
     initiateHack() {
@@ -390,6 +387,88 @@ export function initializeHackSystem() {
     const hackSystem = new HackSystem();
     hackSystem.init();
     
-    // Make it available globally for debugging
+    // Make it available globally for button access
     window.hackSystem = hackSystem;
+    
+    // Create and add the hack access button
+    createHackAccessButton(hackSystem);
+}
+
+function createHackAccessButton(hackSystem) {
+    const hackButton = document.createElement('button');
+    hackButton.id = 'hackAccessButton';
+    hackButton.innerHTML = '<span>ACCESS CLASSIFIED FILES</span>';
+    hackButton.className = 'hack-access-button';
+    
+    hackButton.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: linear-gradient(45deg, var(--bg-darker), var(--border-color));
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 1rem 1.5rem;
+        font-family: 'Orbitron', monospace;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        z-index: 1000;
+        border-radius: 3px;
+        box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+        backdrop-filter: blur(10px);
+        animation: hackButtonPulse 3s ease-in-out infinite;
+    `;
+    
+    // Add hover and click effects
+    hackButton.addEventListener('mouseenter', function() {
+        this.style.background = 'var(--primary-color)';
+        this.style.color = 'var(--bg-dark)';
+        this.style.boxShadow = '0 0 20px var(--primary-color)';
+        this.style.transform = 'translateY(-2px)';
+    });
+    
+    hackButton.addEventListener('mouseleave', function() {
+        this.style.background = 'linear-gradient(45deg, var(--bg-darker), var(--border-color))';
+        this.style.color = 'var(--primary-color)';
+        this.style.boxShadow = '0 0 10px rgba(99, 102, 241, 0.3)';
+        this.style.transform = 'translateY(0)';
+    });
+    
+    hackButton.addEventListener('click', function() {
+        hackSystem.initiateHack();
+        // Hide button once activated
+        this.style.display = 'none';
+    });
+    
+    // Add button animation styles
+    if (!document.querySelector('#hack-button-styles')) {
+        const style = document.createElement('style');
+        style.id = 'hack-button-styles';
+        style.textContent = `
+            @keyframes hackButtonPulse {
+                0%, 100% { 
+                    box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+                    border-color: var(--primary-color);
+                }
+                50% { 
+                    box-shadow: 0 0 25px rgba(99, 102, 241, 0.6);
+                    border-color: var(--secondary-color);
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .hack-access-button {
+                    bottom: 15px !important;
+                    right: 15px !important;
+                    padding: 0.8rem 1.2rem !important;
+                    font-size: 0.8rem !important;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(hackButton);
 }
